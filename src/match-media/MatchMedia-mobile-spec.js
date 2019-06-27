@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 import MatchMedia from './MatchMedia';
 
 describe('MatchMedia', function () {
@@ -14,6 +14,6 @@ describe('MatchMedia', function () {
 
   it('should not render on window size less than 500px', function () {
     const testElements = ReactTestUtils.scryRenderedDOMComponentsWithClass(page, 'testDiv');
-    expect(testElements.length).toBe(0);
+    expect(testElements.length).toBe(1);
   });
 });
